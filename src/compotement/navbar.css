@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'Cairo';
+  src: url('./assets/font/Cairo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#navbar {
+
+    margin-top: 33px;
+}
+
+#menu {
+    width: 24px;
+    height: 24px;
+}
+
+#menu1 {
+    
+    width: 185px;
+    height: 60px;
+
+}
+
+#menu2 {
+
+    color: #6C5DD3;
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+}
+
+
+
+#search {
+    height: 60px;
+  }
+#login {
+
+    border-radius: 14px;
+    background-color: #F0EEFF;
+    text-align: center;
+    line-height: 40px;
+    color: #6C5DD3;
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+
+}
+
+#signup {
+
+    border-radius: 14px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #6C5DD3;
+    margin-left: 18px;
+    color: white;
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+
+
+}
+
+#wishlist {
+
+    position :relative;
+    border-radius: 14px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #F0F0F0; 
+}
+
+#course {
+    position: relative;
+    border-radius: 14px;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 18px;
+    border: 1px solid #F0F0F0; 
+
+}
+
+.icon-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff5c35; /* orange vif */
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  min-width: 18px;
+  text-align: center;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff5c35; /* orange vif */
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  min-width: 18px;
+  text-align: center;
+}
+
+#profile {
+
+    border-radius: 14px;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 18px;
+    background-color: #F0EEFF; 
+    padding: 30px;
+
+}
+
+#langue {
+
+    margin-left: 18px;
+    padding: 20px 25px;
+    background-color: #F0F0F0;
+    border-color: transparent;
+    color: black;
+    font-weight: bold;
+
+}
