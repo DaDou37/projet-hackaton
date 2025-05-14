@@ -1,0 +1,68 @@
+/* styles.css */
+body {
+    background-color: #f5f5f5;
+  }
+  
+  h1 {
+    color: black;
+    text-align: left;
+  }
+
+   .custom-table {
+        background-color: #00000000;
+        border: 2px solid #dee2e600;
+        border-radius: 10px;
+    }
+    
+    .custom-card {
+        background-color: #C4C4C4;
+        border: 1px solid #00000000;
+        box-shadow: 0 2px 4px #C4C4C4;
+        transition: transform 0.2s;
+    }
+    
+    .custom-card:hover {
+        transform: translateY(-2px);
+    }
+    
+    .custom-header {
+        background-color: #C4C4C4;
+        color: black;
+        border-bottom: 2px solid #49505700;
+        font-weight: 600;
+    }
+    
+    .custom-list {
+        background-color: #C4C4C4;
+    }
+    
+    .custom-item {
+        background-color: #C4C4C4;
+        border-bottom: 1px solid #e9ecef;
+        padding: 12px 15px;
+        transition: background-color 0.2s;
+    }
+    
+    .custom-item:hover {
+        background-color: #ffffff;
+    }
+    
+    .money-badge {
+        background-color: #28a745;
+        color: white;
+        font-size: 0.9rem;
+        padding: 5px 10px;
+        border-radius: 4px;
+    }
+    
+    .time-badge {
+        background-color: #17a2b8;
+        color: white;
+        font-size: 0.9rem;
+        padding: 5px 10px;
+        border-radius: 4px;
+    }
+
+    .test4 {
+      background-color: #e9ecef00;
+    }
