@@ -43,7 +43,7 @@ function Navbar1() {
               </DropdownButton>
               <Form.Control  aria-label="Text input with dropdown button" id="search" placeholder="Search over 30 million book titles"/>
               <Button variant="outline-secondary" id="button-addon2">
-                <img src="search1.png" alt="" />
+                <img src="/search1.png" alt="" />
               </Button>
             </InputGroup>
             </div>
