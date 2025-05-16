@@ -73,6 +73,7 @@ function BooksNews() {
                     </div>
                 </div>
             </div>
+            
         </>
     );
 }

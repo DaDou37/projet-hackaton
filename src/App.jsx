@@ -1,18 +1,15 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'; 
 
 import './App.css';
-import BooksGrid from './pages/booksgrid';
+
 import Hometest from './pages/hometest';
 import Home from './pages/home/home';
 import BooksDetails from './pages/booksDetails/booksDetails';
-
 import BooksGrid from './pages/booksgrid/booksgrid';
 import Checkout from './pages/checkout/checkout';
-import Hometest from './pages/Hometest';
-import Home from './pages/home/home';
-
 import './pages/checkout/checkout.css';
 import './pages/booksgrid/styles.css';
+
 import './App.css';
 
 
