@@ -737,9 +737,6 @@ function Home() {
       <div className="container  rounded p-4 my-4">
         <div className="row text-center">
           <div className="col-12 col-md-3 mb-4">
-            <div className="text-primary mb-3">
-              <i className="fas fa-users fa-3x"></i>
-            </div>
             <div className="icon-media mb-4">
               <FontAwesomeIcon icon={faUsers} size="3x" />
             </div>
@@ -747,9 +744,6 @@ function Home() {
             <p className="text-muted">Happy Customers</p>
           </div>
           <div className="col-12 col-md-3 mb-4">
-            <div className="text-primary mb-3">
-              <i className="fas fa-book fa-3x"></i>
-            </div>
             <div className="icon-media mb-4">
               <FontAwesomeIcon icon={faBook} size="3x" />
             </div>
@@ -757,9 +751,6 @@ function Home() {
             <p className="text-muted">Book Collections</p>
           </div>
           <div className="col-12 col-md-3 mb-4">
-            <div className="text-primary mb-3">
-              <i className="fas fa-store fa-3x"></i>
-            </div>
             <div className="icon-media mb-4">
               <FontAwesomeIcon icon={faStore} size="3x" />
             </div>
@@ -767,9 +758,6 @@ function Home() {
             <p className="text-muted">Our Stores</p>
           </div>
           <div className="col-12 col-md-3 mb-4">
-            <div className="text-primary mb-3">
-              <i className="fas fa-feather fa-3x"></i>
-            </div>
             <div className="icon-media mb-4">
               <FontAwesomeIcon icon={faFeather} size="3x" />
             </div>
