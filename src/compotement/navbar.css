@@ -83,7 +83,7 @@
   position: absolute;
   top: -5px;
   right: -5px;
-  background-color: #ff5c35; /* orange vif */
+  background-color: #ff5c35; 
   color: white;
   font-size: 12px;
   font-weight: bold;
@@ -97,7 +97,7 @@
   position: absolute;
   top: -5px;
   right: -5px;
-  background-color: #ff5c35; /* orange vif */
+  background-color: #ff5c35; 
   color: white;
   font-size: 12px;
   font-weight: bold;
@@ -128,3 +128,28 @@
     font-weight: bold;
 
 }
+
+.footer-heading {
+  padding-top: 25px; 
+}
+
+.custom-icon {
+  padding: 14px;
+  border: 1px solid #F0F0F0; 
+  border-radius: 8px; 
+}
+
+.text-reset {
+  text-decoration: none;
+  font-size: 13px;
+  font-family: 'Cairo', sans-serif;
+  font-weight: bold;
+}
+
+#views {
+  color: #6C5DD3 !important;
+}
+
+
+
+
