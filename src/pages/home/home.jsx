@@ -19,8 +19,10 @@ import Countdown from 'react-countdown';
 import Books from '../../compotement/books';
 import Navbar1 from '../../compotement/navbar1';
 import Footer from '../../compotement/footer';
+import NewsletterSubscription from '../../compotement/newsletterSubscription';
 
 import './home.css';
+
 
 
 
@@ -768,6 +770,7 @@ function Home() {
           </div>
         </div>
       </Container>
+      <NewsletterSubscription />
       <Footer />
     </>
   );
