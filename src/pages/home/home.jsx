@@ -2,6 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
 import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
 import { Card } from "react-bootstrap";
@@ -52,6 +53,7 @@ function Home() {
     ],
   };
   return (
+
     /* page Back to school */
 
     <Container fluid className="px-4 py-3">
@@ -358,6 +360,7 @@ function Home() {
 </Slider>
 
 {/* Flash sale */} 
+
 
 
 
