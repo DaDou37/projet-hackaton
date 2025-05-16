@@ -13,7 +13,7 @@ function Navbar1() {
             {/* Logo */}
             <div className="col-3">
 
-              <img src="/logo.png" alt="Logo"/>
+              <img src="imagess/logo.png" alt="Logo"/>
             </div>
   
             <div className="col-6">
@@ -26,7 +26,7 @@ function Navbar1() {
                 title={
                     <span id="menu2">
                       <img
-                        src="/menu1.png"
+                        src="imagess/menu1.png"
                         alt="Menu Icon"
                         style={{ width: "20px", height: "20px", marginRight: "8px" }}
                       />
@@ -43,7 +43,7 @@ function Navbar1() {
               </DropdownButton>
               <Form.Control  aria-label="Text input with dropdown button" id="search" placeholder="Search over 30 million book titles"/>
               <Button variant="outline-secondary" id="button-addon2">
-                <img src="/search1.png" alt="" />
+                <img src="imagess/search1.png" alt="" />
               </Button>
             </InputGroup>
             </div>
