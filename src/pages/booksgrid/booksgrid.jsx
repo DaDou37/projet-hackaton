@@ -5,21 +5,12 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { Card, Badge, ListGroup, Table } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Books from '../../compotement/books';
+import Navbar2 from '../../compotement/navbar2';
+import Footer from '../../compotement/footer';
+import NewsletterSubscription from '../../compotement/newsletterSubscription';
 
 function BooksGrid() {
-
-    const [currentPageb, setCurrentPageb] = useState(1);
-    
-
-    // Données pour les cartes (vous pouvez utiliser vos sections existantes)
-    const cardsData = [
-        { id: 1, title: 'Livre 1', price: 24.99, originalPrice: 29.99, image: '#C4C4C4' },
-        { id: 2, title: 'Livre 2', price: 19.99, originalPrice: 24.99, image: '#C4C4C4' },
-        { id: 3, title: 'Livre 3', price: 34.99, originalPrice: 39.99, image: '#C4C4C4' },
-        { id: 4, title: 'Livre 4', price: 14.99, originalPrice: 19.99, image: '#C4C4C4' },
-        { id: 5, title: 'Livre 5', price: 27.99, originalPrice: 32.99, image: '#C4C4C4' },
-        { id: 6, title: 'Livre 6', price: 21.99, originalPrice: 26.99, image: '#C4C4C4' },
-    ];
 
     const toggleView = (viewType) => {
         setShowGrid(viewType === 'grid');
@@ -84,70 +75,70 @@ function BooksGrid() {
         },
         {
             title: "Terrible Madness",
-            items: ["ADVENTURE", "1:00"],
+            items: ["ADVENTURE"],
             price: 54.78,
             originalPrice: 70.00,
             discount: 20
         },
         {
             title: "The Missadventure...",
-            items: ["A Heavy Lift", "HORSEY BANK", "2:00"],
+            items: ["ADVANTURE"],
             price: 54.78,
             originalPrice: 70.00,
             discount: 20
         },
         {
             title: "A Heavy Lift",
-            items: ["RICHER BANK", "3:00"],
+            items: ["HORROR, DRAMA"],
             price: 54.78,
             originalPrice: 70.00,
             discount: 20
         },
         {
             title: "Battler Drive",
-            items: ["SHOTTLE SMALL", "4:00"],
+            items: ["RACING, DRAMA"],
             price: 54.78,
             originalPrice: 70.00,
             discount: 20
         },
         {
             title: "Take Out Tango",
-            items: ["GRAIN, COSTOFF", "5:00"],
+            items: ["SPROTS, DRAMA"],
             price: 54.78,
             originalPrice: 70.00,
             discount: 20
         },
         {
             title: "Pushing Clouds",
-            items: ["THILLER", "6:00"],
+            items: ["DRAMA, COMEDY"],
             price: 54.78,
             originalPrice: 70.00,
             discount: 20
         },
         {
             title: "SECONDS",
-            items: ["DAMN, BROWNIE", "7:00"],
+            items: ["THRILLER"],
             price: 54.78,
             originalPrice: 70.00,
             discount: 20
         },
         {
             title: "REWORK",
-            items: ["THRILLER", "8:00"],
+            items: ["DRAMA, BIOGRAPHY"],
             price: 54.78,
             originalPrice: 70.00,
             discount: 20
         },
         {
             title: "Such a Fun Age",
-            items: ["GRAIN, BROWNIE", "9:00"],
+            items: ["THRILLER"],
             price: 54.78,
             originalPrice: 70.00,
             discount: 20
         },
         {
             title: "Emily and The Back...",
-            items: ["THRILLER", "8:00"],
+            items: ["DRAMA, BIOGRAPHY"],
             price: 54.78,
             originalPrice: 70.00,
             discount: 20
@@ -211,9 +202,10 @@ function BooksGrid() {
     };
 
     return (
-        <Container>
+        <Container fluid>
+            <Navbar2 />
             <Row>
-                <Col style={{ marginLeft: '-100px', maxWidth: '500px' }}>
+                <Col style={{ marginLeft: '100px', maxWidth: '500px' }}>
                     <h1>FILTER OPTION</h1>
                     <div className="filter-system">
                         {/* Section Editor Picks */}
@@ -357,7 +349,7 @@ function BooksGrid() {
                         <Button variant="primary">This Week</Button>
                         <Button variant="primary">This Month</Button>
 
-                        <div className="d-flex gap-2" style={{ marginLeft: '300px', marginTop: '5px' }}>
+                        <div className="d-flex gap-2" style={{ marginLeft: '300px', marginTop: '0px' }}>
                             <Button
                                 variant={viewMode === 'detailed' ? 'dark' : 'light'}
                                 onClick={() => toggleViewMode('detailed')}
@@ -365,7 +357,7 @@ function BooksGrid() {
                                 <img
                                     src={menuIcon}
                                     alt="List View"
-                                    style={{ width: '20px', height: '20px' }}
+                                    style={{ width: '20px', height: '20px', marginLeft: '200px' }}
                                 />
                             </Button>
                             <Button
@@ -380,31 +372,32 @@ function BooksGrid() {
                             </Button>
                             <img
                                 src="images/ic_sidebarView.png"
-                                style={{ width: '20px', height: '20px', marginTop: '10px', marginLeft: '-8px' }}
+                                style={{ width: '20px', height: '20px', marginTop: '11px', marginLeft: '-10px' }}
                                 alt="Sidebar View"
                             />
                         </div>
                         <div className="d-flex gap-2" style={{ marginLeft: 'auto' }}>
                             <img
                                 src="images/sortBy.png"
-                                style={{ width: '100px', height: '30px', marginTop: '10px' }}
+                                style={{ width: '100px', height: '30px', marginTop: '10px', marginLeft: '-200px' }}
                             />
                         </div>
                     </div>
 
-                    <div style={{ margin: '50px -10px' }}>
+                    <div style={{ margin: '0px -10px' }}>
                         <div className="row">
                             {sections.map((section, index) => (
                                 <div
                                     key={index}
-                                    className={viewMode === 'grid' ? "col-sm-6 col-md-4 col-lg-3 p-3" : "col-12 mb-3"}
+                                    className={viewMode === 'grid' ? "col-sm-6 col-md-4 col-lg-3 p-2" : "col-12 mb-3"}
                                     onMouseEnter={() => setHoveredBook(index)}
                                     onMouseLeave={() => setHoveredBook(null)}
                                 >
                                     {viewMode === 'grid' ? (
-                                        <Card className="h-100 border-0 shadow-sm" style={{
+                                        <Card className="h-100 border-0 shadow-sm d-flex flex-column" style={{
                                             transition: 'all 0.3s ease',
-                                            transform: hoveredBook === index ? 'translateY(-5px)' : 'none'
+                                            transform: hoveredBook === index ? 'translateY(-5px)' : 'none',
+                                            height: '400px' // Hauteur fixe pour toutes les cartes
                                         }}>
                                             <Button
                                                 variant="link"
@@ -420,11 +413,17 @@ function BooksGrid() {
 
                                             <div style={{
                                                 height: '250px',
+                                                width: '170px',
                                                 backgroundColor: '#C4C4C4',
                                                 borderRadius: '10%',
+                                                flex: '0 0 auto' // Empêche cette partie de grandir
                                             }} />
 
-                                            <Card.Body className="d-flex flex-column" style={{ padding: '1rem' }}>
+                                            <Card.Body className="d-flex flex-column" style={{
+                                                padding: '1rem',
+                                                flex: '1 1 auto', // Permet au body de prendre l'espace restant
+                                                minHeight: '150px' // Hauteur minimale garantie
+                                            }}>
                                                 <div>
                                                     <Card.Title className="mb-1" style={{
                                                         fontSize: '0.9rem',
@@ -436,7 +435,7 @@ function BooksGrid() {
                                                         {section.title}
                                                     </Card.Title>
                                                     <Card.Text className="text-muted mb-2" style={{ fontSize: '0.75rem' }}>
-                                                        {section.items[0]}
+                                                        <h6>{section.items[0]}</h6>
                                                     </Card.Text>
                                                     <img
                                                         src="images/stars.png"
@@ -444,7 +443,6 @@ function BooksGrid() {
                                                         style={{
                                                             width: '130px',
                                                             height: '20px',
-                                                            borderRadius: '30%',
                                                             marginTop: '5px',
                                                             marginRight: '5px',
                                                             opacity: hoveredBook === index ? 0 : 1,
@@ -462,7 +460,13 @@ function BooksGrid() {
                                                         <Button
                                                             variant="primary"
                                                             className="w-100"
-                                                            style={{ fontSize: '20px', padding: '0.25rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                                                            style={{
+                                                                fontSize: '20px',
+                                                                padding: '0.25rem',
+                                                                display: 'flex',
+                                                                alignItems: 'center',
+                                                                justifyContent: 'center'
+                                                            }}
                                                         >
                                                             <img
                                                                 src="images/Vector.png"
@@ -478,9 +482,9 @@ function BooksGrid() {
                                     ) : (
                                         <Card className="d-flex flex-row h-100 p-3 border-0 shadow-sm">
                                             <div style={{
-                                                width: '300px',
-                                                height: '150px',
-                                                borderRadius: '30%',
+                                                width: '180px',
+                                                height: '250px',
+                                                borderRadius: '10%',
                                                 backgroundColor: '#C4C4C4',
                                                 marginRight: '50px'
                                             }} />
@@ -530,120 +534,18 @@ function BooksGrid() {
                         </div>
                     </div>
 
-                    <div className="custom-pagination" style={{ marginLeft: '650px' }}>
-                        <button
-                            className="custom-pagination-button custom-pagination-prev-next"
-                            onClick={() => handlePageChange(currentPage - 1)}
-                            disabled={currentPage === 1}
-                        >
-                            &lt; Previous
-                        </button>
-
-                        {[1, 2, 3].map(page => (
-                            <button
-                                key={page}
-                                className={`custom-pagination-button custom-pagination-page ${currentPage === page ? 'active' : ''}`}
-                                onClick={() => handlePageChange(page)}
-                            >
-                                {page}
-                            </button>
-                        ))}
-
-                        <button
-                            className="custom-pagination-button custom-pagination-prev-next"
-                            onClick={() => handlePageChange(currentPage + 1)}
-                            disabled={currentPage === totalPages}
-                        >
-                            Next &gt;
-                        </button>
-                    </div>
-
-                    <div className="d-flex justify-content-center mb-4">
-                        <nav aria-label="Page navigation">
-                            <ul className="pagination">
-                                <li className={`page-item ${currentPageb === 1 ? 'disabled' : ''}`}>
-                                    <Button
-                                        className="page-link"
-                                        onClick={() => setCurrentPageb(prev => Math.max(prev - 1, 1))}
-                                    >
-                                        &laquo;
-                                    </Button>
-                                </li>
-                                {[...Array(totalPages)].map((_, i) => (
-                                    <li key={i} className={`page-item ${currentPageb === i + 1 ? 'active' : ''}`}>
-                                        <Button
-                                            className="page-link"
-                                            onClick={() => setCurrentPageb(i + 1)}
-                                        >
-                                            {i + 1}
-                                        </Button>
-                                    </li>
-                                ))}
-                                <li className={`page-item ${currentPageb === totalPages ? 'disabled' : ''}`}>
-                                    <Button
-                                        className="page-link"
-                                        onClick={() => setCurrentPageb(prev => Math.min(prev + 1, totalPages))}
-                                    >
-                                        &raquo;
-                                    </Button>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-
-                    {/* Grille de 6 cartes */}
-                    <div className="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4">
-                        {cardsData.map((card) => (
-                            <Col key={card.id}>
-                                <Card className="h-100 shadow-sm">
-                                    <div
-                                        style={{
-                                            height: '200px',
-                                            backgroundColor: card.image,
-                                            position: 'relative'
-                                        }}
-                                    >
-                                        <Button
-                                            variant="link"
-                                            className="position-absolute top-0 end-0 p-2"
-                                        >
-                                            <img
-                                                src="images/favorite.png"
-                                                alt="Favori"
-                                                style={{ width: '25px', height: '25px' }}
-                                            />
-                                        </Button>
-                                    </div>
-                                    <Card.Body>
-                                        <Card.Title className="fs-6">{card.title}</Card.Title>
-                                        <div className="d-flex align-items-center">
-                                            <span className="text-primary fw-bold">${card.price.toFixed(2)}</span>
-                                            <small className="text-muted text-decoration-line-through ms-2">
-                                                ${card.originalPrice.toFixed(2)}
-                                            </small>
-                                        </div>
-                                    </Card.Body>
-                                    <Card.Footer className="bg-white border-0">
-                                        <Button variant="primary" size="sm" className="w-100">
-                                            <img
-                                                src="images/Vector.png"
-                                                alt="Cart"
-                                                style={{ width: '12px', height: '12px', marginRight: '5px' }}
-                                            />
-                                            Add to cart
-                                        </Button>
-                                    </Card.Footer>
-                                </Card>
-                            </Col>
-                        ))}
-                    </div>
-                    <img
-                        src="images/features.png"
-                        style={{ marginLeft: '-600px' }}
-                    />
 
                 </Col>
             </Row>
+            <Container fluid>
+                <Books />
+                <img
+                    src="images/features.png"
+                    style={{ marginLeft: '-600px' }}
+                />
+                <NewsletterSubscription />
+            </Container>
+            <Footer />
         </Container>
     );
 }

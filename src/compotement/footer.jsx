@@ -96,7 +96,7 @@ export default function Footer() {
     <p><a href="#!" className="text-reset">Mystery</a></p>
     <p><a href="#!" className="text-reset">Romance</a></p>
     <p><a href="#!" className="text-reset">TV Series</a></p>
-    <p><a href="#!" className="text-reset" id="views">Views more >  </a></p>
+    <p><a href="#!" className="text-reset" id="views">Views more</a></p>
   </div>
 </div>
           </MDBCol>
