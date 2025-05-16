@@ -6,9 +6,9 @@ function Payment() {
                     <div>
                         <label className="paymentTitle">Payment</label>
                         <div className="flex">
-                            <button className="paymentOption"><img className='paymentImage' src='src/compotement/images/BankTransfer.png' /></button>
-                            <button className="paymentOption"><img className='paymentImage' src='src/compotement/images/CreditCard.jpg' /></button>
-                            <button className="paymentOption"><img className='paymentImage' src='src/compotement/images/PayPal.jpg' /></button>
+                            <button className="paymentOption"><img className='paymentImage' src='src/compotement/images/checkout/BankTransfer.png' /></button>
+                            <button className="paymentOption"><img className='paymentImage' src='src/compotement/checkout/images/CreditCard.jpg' /></button>
+                            <button className="paymentOption"><img className='paymentImage' src='src/compotement/checkout/images/PayPal.jpg' /></button>
                         </div>
                     </div>
                     <div className="separator"></div>
