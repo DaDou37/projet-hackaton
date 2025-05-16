@@ -7,7 +7,7 @@ import {
   MDBIcon,
 } from "mdb-react-ui-kit";
 
-export default function App() {
+export default function Footer() {
   return (
     <MDBFooter bgColor="light" className="text-center text-lg-start text-muted">
       <MDBContainer className="text-center text-md-start mt-5 px-0">

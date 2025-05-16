@@ -3,7 +3,7 @@ import { Navbar, Container, InputGroup, DropdownButton, Dropdown, Form, Button, 
 import "./navbar.css"
 import { useState } from "react";
 
-  
+
 
 
 
@@ -12,12 +12,12 @@ function Navbar1() {
   const [open, setOpen] = useState(false);
 
     return (
-  
+
           <Container>
       <div className="d-md-none d-flex justify-content-between align-items-center py-2">
         <img src="/logo.png" alt="Logo" style={{ height: "40px" }} />
 
-        
+
         <Button
           variant="outline-secondary"
           onClick={() => setOpen(!open)}
@@ -141,7 +141,7 @@ function Navbar1() {
         </div>
       </div>
     </Container>
-    ); 
+    );
   }
-  
+
   export default Navbar1;
