@@ -4,7 +4,6 @@ import './index.css'
 import App from './App.jsx'
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import BooksGrid from './pages/BooksGrid.jsx'
 
 import BooksGrid from './pages/booksgrid/booksgrid.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
