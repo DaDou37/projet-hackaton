@@ -1,0 +1,220 @@
+.root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em .646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em .61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: .888;
+}
+
+.flex {
+  display: flex;
+}
+
+.progressBar {
+  max-width: 50%;
+  margin-top: 40px;
+}
+
+.buyerInfo {
+  width: 15vw;
+  margin-right: 10px;
+  margin-left: 50px;
+  margin-top: 10px;
+  min-width: 60%;
+}
+
+.zipInfo {
+  position: relative;
+  left: 6%;
+}
+
+.stateInfo {
+  width: 15vw;
+  margin-right: 10px;
+  margin-left: 50px;
+  margin-top: 8px;
+  min-width: 60%;
+}
+
+.longBuyerInfo {
+  width: 70%;
+  margin-left: 50px;
+  margin-top: 20px;
+  min-width: 145%;
+}
+
+.buyerNote {
+  width: 150%;
+  height: 15vh;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.buyerTitle {
+  position: relative;
+  left: 15%;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.positionLeft {
+  position: relative;
+  left: 18%;
+  top: 10%;
+}
+
+.positionLeft2 {
+  position: relative;
+  left: 14%;
+  top: 10%;
+}
+
+.longPositionLeft {
+  position: relative;
+  left: 14%;
+  top: 25%;
+}
+
+.notePositionLeft {
+  position: relative;
+  left: 14%;
+  top: 10%;
+}
+
+.zipPosition {
+  position: relative;
+  left: 23%;
+  top: 10%
+}
+
+.paymentTitle {
+  font-size: xx-large;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.paymentImage {
+  width: 10vw;
+  height: 10vw;
+}
+
+.paymentOption {
+  margin-right: 20px;
+}
+
+.separator {
+  border: #afafb8 dotted;
+  width: 150%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.paymentName {
+  width: 150%;
+}
+
+.paymentNumber {
+  width: 145%;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+.paymentCVV {
+  position: relative;
+  left: 85px;
+  width: 145%;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.paymentMonth {
+  flex: 0 0 265px;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+
+.paymentYear {
+  position: relative;
+  flex: 0 0 265px;
+  margin-top: 15px;
+}
+
+.paymentButton {
+  width: 150%;
+  margin-top: 25px;
+}
+
+.positionNumber {
+  position: relative;
+  top: 15px;
+}
+
+.positionCVV {
+  position: relative;
+  top: 15px;
+  left: 100px;
+}
+
+.guarantee {
+  background-color: #e5dcf5;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 1%;
+}
+
+.guaranteeContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.guaranteeImage {
+  width: 5vw;
+  height: 5vw;
+  margin-right: 15px;
+  margin-left: 50px;
+}
+
+.guaranteeText {
+  display: flex;
+  flex-direction: column;
+  margin-right: 200px;
+}
