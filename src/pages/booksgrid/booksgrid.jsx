@@ -7,6 +7,45 @@ import { Card, Badge, ListGroup, Table } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function BooksGrid() {
+
+    const [currentPageb, setCurrentPageb] = useState(1);
+    
+
+    // Données pour les cartes (vous pouvez utiliser vos sections existantes)
+    const cardsData = [
+        { id: 1, title: 'Livre 1', price: 24.99, originalPrice: 29.99, image: '#C4C4C4' },
+        { id: 2, title: 'Livre 2', price: 19.99, originalPrice: 24.99, image: '#C4C4C4' },
+        { id: 3, title: 'Livre 3', price: 34.99, originalPrice: 39.99, image: '#C4C4C4' },
+        { id: 4, title: 'Livre 4', price: 14.99, originalPrice: 19.99, image: '#C4C4C4' },
+        { id: 5, title: 'Livre 5', price: 27.99, originalPrice: 32.99, image: '#C4C4C4' },
+        { id: 6, title: 'Livre 6', price: 21.99, originalPrice: 26.99, image: '#C4C4C4' },
+    ];
+
+    const toggleView = (viewType) => {
+        setShowGrid(viewType === 'grid');
+    };
+
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const nextSlide = () => {
+        setCurrentSlide((prev) => (prev === sections.length - 1 ? 0 : prev + 1));
+    };
+
+    const prevSlide = () => {
+        setCurrentSlide((prev) => (prev === 0 ? sections.length - 1 : prev - 1));
+    };
+
+    const [menuIcon, setMenuIcon] = useState("images/open-menu 1.png");
+
+    const toggleViewMode = (mode) => {
+        setViewMode(mode);
+        setMenuIcon(mode === 'detailed'
+            ? "images/open-menuv.png"
+            : "images/open-menu 1.png");
+    };
+
+
+
     const [hoveredBook, setHoveredBook] = useState(null);
     const [viewMode, setViewMode] = useState('grid');
     const [currentPage, setCurrentPage] = useState(1);
@@ -319,22 +358,36 @@ function BooksGrid() {
                         <Button variant="primary">This Month</Button>
 
                         <div className="d-flex gap-2" style={{ marginLeft: '300px', marginTop: '5px' }}>
-                            <Button variant={viewMode === 'detailed' ? 'dark' : 'light'} onClick={() => setViewMode('detailed')}>
-                                <img src="images/open-menu 1.png" alt="List View" style={{ width: '20px', height: '20px' }} />
+                            <Button
+                                variant={viewMode === 'detailed' ? 'dark' : 'light'}
+                                onClick={() => toggleViewMode('detailed')}
+                            >
+                                <img
+                                    src={menuIcon}
+                                    alt="List View"
+                                    style={{ width: '20px', height: '20px' }}
+                                />
                             </Button>
-                            <Button variant={viewMode === 'grid' ? 'dark' : 'light'} onClick={() => setViewMode('grid')}>
-                                <img src="images/ic_gridView.png" alt="Grid View" style={{ width: '20px', height: '20px' }} />
+                            <Button
+                                variant={viewMode === 'grid' ? 'dark' : 'light'}
+                                onClick={() => toggleViewMode('grid')}
+                            >
+                                <img
+                                    src="images/ic_gridView.png"
+                                    alt="Grid View"
+                                    style={{ width: '20px', height: '20px', marginLeft: '-20px' }}
+                                />
                             </Button>
-                            <button
+                            <img
                                 src="images/ic_sidebarView.png"
-                                style={{ width: '20px', height: '20px' }}
+                                style={{ width: '20px', height: '20px', marginTop: '10px', marginLeft: '-8px' }}
                                 alt="Sidebar View"
                             />
                         </div>
                         <div className="d-flex gap-2" style={{ marginLeft: 'auto' }}>
-                            <button
+                            <img
                                 src="images/sortBy.png"
-                                style={{ width: '100px', height: '30px' }}
+                                style={{ width: '100px', height: '30px', marginTop: '10px' }}
                             />
                         </div>
                     </div>
@@ -342,14 +395,14 @@ function BooksGrid() {
                     <div style={{ margin: '50px -10px' }}>
                         <div className="row">
                             {sections.map((section, index) => (
-                                <div 
+                                <div
                                     key={index}
                                     className={viewMode === 'grid' ? "col-sm-6 col-md-4 col-lg-3 p-3" : "col-12 mb-3"}
                                     onMouseEnter={() => setHoveredBook(index)}
                                     onMouseLeave={() => setHoveredBook(null)}
                                 >
                                     {viewMode === 'grid' ? (
-                                        <Card className="h-100 border-0 shadow-sm" style={{ 
+                                        <Card className="h-100 border-0 shadow-sm" style={{
                                             transition: 'all 0.3s ease',
                                             transform: hoveredBook === index ? 'translateY(-5px)' : 'none'
                                         }}>
@@ -361,7 +414,7 @@ function BooksGrid() {
                                                 <img
                                                     src="images/favorite.png"
                                                     alt="Favori"
-                                                    style={{width: '35px', height: '35px', borderRadius: '30%', marginTop: '5px', marginRight: '5px'}}
+                                                    style={{ width: '35px', height: '35px', borderRadius: '30%', marginTop: '5px', marginRight: '5px' }}
                                                 />
                                             </Button>
 
@@ -373,7 +426,7 @@ function BooksGrid() {
 
                                             <Card.Body className="d-flex flex-column" style={{ padding: '1rem' }}>
                                                 <div>
-                                                    <Card.Title className="mb-1" style={{ 
+                                                    <Card.Title className="mb-1" style={{
                                                         fontSize: '0.9rem',
                                                         fontWeight: 'bold',
                                                         whiteSpace: 'nowrap',
@@ -385,20 +438,37 @@ function BooksGrid() {
                                                     <Card.Text className="text-muted mb-2" style={{ fontSize: '0.75rem' }}>
                                                         {section.items[0]}
                                                     </Card.Text>
+                                                    <img
+                                                        src="images/stars.png"
+                                                        alt="Rating stars"
+                                                        style={{
+                                                            width: '130px',
+                                                            height: '20px',
+                                                            borderRadius: '30%',
+                                                            marginTop: '5px',
+                                                            marginRight: '5px',
+                                                            opacity: hoveredBook === index ? 0 : 1,
+                                                            transition: 'opacity 0.3s ease'
+                                                        }}
+                                                    />
                                                 </div>
 
                                                 {hoveredBook === index && (
                                                     <div className="mt-auto">
                                                         <div className="d-flex align-items-center mb-2">
-                                                            <span className="text-danger fw-bold">${section.price.toFixed(2)}</span>
+                                                            <span className="custom-price-color fw-bold">${section.price.toFixed(2)}</span>
                                                             <span className="text-muted text-decoration-line-through ms-2">${section.originalPrice.toFixed(2)}</span>
                                                         </div>
-                                                        <Button 
-                                                            variant="primary" 
-                                                            size="sm" 
+                                                        <Button
+                                                            variant="primary"
                                                             className="w-100"
-                                                            style={{ fontSize: '0.75rem', padding: '0.25rem' }}
+                                                            style={{ fontSize: '20px', padding: '0.25rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                                                         >
+                                                            <img
+                                                                src="images/Vector.png"
+                                                                alt="cart icon"
+                                                                style={{ width: '15px', height: '15px', marginRight: '10px' }}
+                                                            />
                                                             Add to cart
                                                         </Button>
                                                     </div>
@@ -408,11 +478,11 @@ function BooksGrid() {
                                     ) : (
                                         <Card className="d-flex flex-row h-100 p-3 border-0 shadow-sm">
                                             <div style={{
-                                                width: '100px',
-                                                height: '130px',
-                                                backgroundColor: '#f5f5f5',
-                                                backgroundImage: 'linear-gradient(to bottom right, #eeeeee, #e0e0e0)',
-                                                marginRight: '20px'
+                                                width: '300px',
+                                                height: '150px',
+                                                borderRadius: '30%',
+                                                backgroundColor: '#C4C4C4',
+                                                marginRight: '50px'
                                             }} />
 
                                             <div className="d-flex flex-column flex-grow-1">
@@ -421,27 +491,36 @@ function BooksGrid() {
                                                         <h5 className="mb-1" style={{ fontSize: '1rem' }}>{section.title}</h5>
                                                         <p className="text-muted small mb-2">{section.items.join(' • ')}</p>
                                                     </div>
-                                                    <Button variant="link" className="p-0">
-                                                        <img
-                                                            src="images/favorite.png"
-                                                            alt="Favori"
-                                                        />
-                                                    </Button>
                                                 </div>
 
                                                 <div className="mt-auto">
                                                     <div className="d-flex align-items-center mb-2">
-                                                        <span className="text-danger fw-bold">${section.price.toFixed(2)}</span>
+                                                        <span className="custom-price-color fw-bold">${section.price.toFixed(2)}</span>
                                                         <span className="text-muted text-decoration-line-through ms-2">${section.originalPrice.toFixed(2)}</span>
-                                                        <Badge bg="warning" text="dark" className="ms-2">{section.discount}% OFF</Badge>
+                                                        <img
+                                                            src="images/stars.png"
+                                                            alt="Rating stars"
+                                                            style={{
+                                                                width: '130px',
+                                                                height: '20px',
+                                                                marginTop: '-130px',
+                                                                marginLeft: '500px'
+                                                            }}
+                                                        />
                                                     </div>
-                                                    <Button 
-                                                        variant="primary" 
-                                                        size="sm" 
-                                                        style={{ width: '120px' }}
+                                                    <Button
+                                                        variant="primary"
+                                                        size="sm"
+                                                        style={{ width: '150px', height: '50px', marginLeft: '550px' }}
                                                     >
+                                                        <img
+                                                            src="images/Vector.png"
+                                                            alt="cart icon"
+                                                            style={{ width: '15px', height: '15px', marginRight: '10px' }}
+                                                        />
                                                         Add to cart
                                                     </Button>
+
                                                 </div>
                                             </div>
                                         </Card>
@@ -478,6 +557,91 @@ function BooksGrid() {
                             Next &gt;
                         </button>
                     </div>
+
+                    <div className="d-flex justify-content-center mb-4">
+                        <nav aria-label="Page navigation">
+                            <ul className="pagination">
+                                <li className={`page-item ${currentPageb === 1 ? 'disabled' : ''}`}>
+                                    <Button
+                                        className="page-link"
+                                        onClick={() => setCurrentPageb(prev => Math.max(prev - 1, 1))}
+                                    >
+                                        &laquo;
+                                    </Button>
+                                </li>
+                                {[...Array(totalPages)].map((_, i) => (
+                                    <li key={i} className={`page-item ${currentPageb === i + 1 ? 'active' : ''}`}>
+                                        <Button
+                                            className="page-link"
+                                            onClick={() => setCurrentPageb(i + 1)}
+                                        >
+                                            {i + 1}
+                                        </Button>
+                                    </li>
+                                ))}
+                                <li className={`page-item ${currentPageb === totalPages ? 'disabled' : ''}`}>
+                                    <Button
+                                        className="page-link"
+                                        onClick={() => setCurrentPageb(prev => Math.min(prev + 1, totalPages))}
+                                    >
+                                        &raquo;
+                                    </Button>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    {/* Grille de 6 cartes */}
+                    <div className="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4">
+                        {cardsData.map((card) => (
+                            <Col key={card.id}>
+                                <Card className="h-100 shadow-sm">
+                                    <div
+                                        style={{
+                                            height: '200px',
+                                            backgroundColor: card.image,
+                                            position: 'relative'
+                                        }}
+                                    >
+                                        <Button
+                                            variant="link"
+                                            className="position-absolute top-0 end-0 p-2"
+                                        >
+                                            <img
+                                                src="images/favorite.png"
+                                                alt="Favori"
+                                                style={{ width: '25px', height: '25px' }}
+                                            />
+                                        </Button>
+                                    </div>
+                                    <Card.Body>
+                                        <Card.Title className="fs-6">{card.title}</Card.Title>
+                                        <div className="d-flex align-items-center">
+                                            <span className="text-primary fw-bold">${card.price.toFixed(2)}</span>
+                                            <small className="text-muted text-decoration-line-through ms-2">
+                                                ${card.originalPrice.toFixed(2)}
+                                            </small>
+                                        </div>
+                                    </Card.Body>
+                                    <Card.Footer className="bg-white border-0">
+                                        <Button variant="primary" size="sm" className="w-100">
+                                            <img
+                                                src="images/Vector.png"
+                                                alt="Cart"
+                                                style={{ width: '12px', height: '12px', marginRight: '5px' }}
+                                            />
+                                            Add to cart
+                                        </Button>
+                                    </Card.Footer>
+                                </Card>
+                            </Col>
+                        ))}
+                    </div>
+                    <img
+                        src="images/features.png"
+                        style={{ marginLeft: '-600px' }}
+                    />
+
                 </Col>
             </Row>
         </Container>
