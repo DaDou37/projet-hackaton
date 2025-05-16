@@ -7,7 +7,7 @@ function Test() {
     return (
         <>
        <div>
-        <Footer />
+        <Navbar2 />
     </div>
         </>
     )
