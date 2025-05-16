@@ -9,9 +9,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<BooksGrid />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/BooksGrid" element={<BooksGrid />} />
         <Route path="/hometest" element={<Hometest />} />
-        <Route path="/home" element={<Home />} />
+        
       </Routes>
     </BrowserRouter>
   );

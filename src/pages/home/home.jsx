@@ -16,7 +16,10 @@ import "slick-carousel/slick/slick-theme.css";
 import Countdown from 'react-countdown';
 
 
-import Books from './books';
+import Books from '../../compotement/books';
+import Navbar1 from '../../compotement/navbar1';
+import Footer from '../../compotement/footer';
+
 import './home.css';
 
 
@@ -71,8 +74,10 @@ function Home() {
   };
 
   return (
+<>
+<Navbar1 />
 
-    /* page Back to school */
+    {/* page Back to school */}
 
     <Container fluid className="px-4 py-3">
       <Row className="gx-4">
@@ -776,6 +781,9 @@ function Home() {
 
 
     </Container>
+
+    <Footer />
+    </>
   );
 }
 
